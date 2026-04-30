@@ -118,19 +118,7 @@ The project exposes a simple read-only REST API:
 
 **Message** — belongs to a user and a room. Ordered by most recent first.
 
-## Things to know before running in production
-
-- The `SECRET_KEY` in `settings.py` is exposed. Move it to an environment variable before deploying.
-- `DEBUG = True` — flip this off and set `ALLOWED_HOSTS` properly.
-- SQLite works fine for local dev, but swap it for PostgreSQL for anything serious.
-- `CORS_ALLOW_ALL_ORIGINS = True` is very permissive. Lock this down to specific origins if the API is public.
-
-A `.env`-based settings setup is the recommended next step if you plan to deploy this.
 
 ## Contributing
 
 Pull requests are welcome. For larger changes, open an issue first so we can discuss what you'd like to change.
-
-## License
-
-MIT
